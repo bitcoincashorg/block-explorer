@@ -31,7 +31,7 @@ div.tab-content
 			- var sumTableValueClass = (result.blockstats != null ? "summary-split-table-content" : "summary-table-content");
 
 			div.mb-3(class=(result.blockstats != null ? "col-md-6 pr-0" : "col-md-12"))
-				div.card.shadow-sm(style="height: 100%;")
+				div.card.shadow(style="height: 100%;")
 					div.card-body.px-2.px-md-3
 						h3.h6.mb-0 Summary
 						hr
@@ -161,7 +161,7 @@ div.tab-content
 
 			if (result.blockstats)
 				div.col-md-6.mb-3
-					div.card.shadow-sm(style="height: 100%;")
+					div.card.shadow(style="height: 100%;")
 						div.card-body.px-2.px-md-3
 							h3.h6.mb-0 Technical Details
 							hr
@@ -205,7 +205,7 @@ div.tab-content
 										
 										span.text-muted  (#{result.getblock.chainwork.replace(/^0+/, '')})
 
-		div.card.shadow-sm.mb-3
+		div.card.shadow.mb-3
 			div.card-body.px-2.px-md-3
 				div.row
 					div.col-md-4

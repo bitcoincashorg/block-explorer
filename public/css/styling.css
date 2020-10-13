@@ -2,6 +2,8 @@ body {
 	font-size: 14px;
 	font-family: "Ubuntu", sans-serif;
 	/*font: 14px 'Open Sans', "Lucida Grande", Helvetica, Arial, sans-serif;*/
+	background-color: rgb(251, 252, 255) !important;
+	color: #444;
 }
 
 hr {
@@ -9,11 +11,13 @@ hr {
 }
 
 img.header-image {
-	margin-top: -10px;
-	margin-bottom: -5px;
-	width: 30px;
-	height: 30px;
-	margin-right: 10px;
+	width: 200px;
+}
+
+.dropdown-custom {
+	background-color: transparent !important;
+	color: #fff !important;
+	border: none !important;
 }
 
 code, .text-monospace {
@@ -87,8 +91,60 @@ dd {
 	margin-right: 20px;
 }
 
+.navbg-blue {
+	background: linear-gradient(270deg, #040c3c, #212c6e);
+    padding: 20px;
+}
+
+.formHeight {
+	height: 50px;
+}
+
+.form-control {
+    color: #444 !important;
+    background-color: #fff !important;
+    border: 1px solid rgba(154,155,156,.25) !important;
+}
+
+.form-control:focus {
+    color: #444;
+    background-color: #fff;
+    border-color: rgba(154,155,156,.25) !important;
+}
+
+input.form-control::placeholder {
+    color: #adadad;
+}
+
+.searchbtn {
+	background-color: #ff8d00 !important;
+	border-color: #ff8d00 !important;
+}
+
+.card {
+	background-color: #fff !important;
+	color: #444 !important;
+}
+
+.table {
+	background-color: transparent !important;
+	color: #444 !important;
+}
+
+.table td, .table th {
+    border-top: none !important;
+}
+
 .table th {
 	border-top: none;
+}
+
+.table thead th {
+    border-bottom: 1px solid #8f8f8f !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.07) !important;
 }
 
 .dropdown-item:focus, .dropdown-item:hover {

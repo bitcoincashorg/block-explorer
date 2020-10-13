@@ -181,7 +181,7 @@ block content
 													i.fas.fa-times.text-warning
 
 					if (false)
-						div.card.shadow-sm.mb-3
+						div.card.shadow.mb-3
 							div.card-header
 								span.h6 Flags
 							div.card-body
@@ -285,7 +285,7 @@ block content
 								each tx, txIndex in transactions
 									//pre
 									//	code.json.bg-light #{JSON.stringify(tx, null, 4)}
-									div.card.shadow-sm(class=((txIndex < (transactions.length - 1) || txids.length > limit) ? "mb-3" : ""))
+									div.card.shadow(class=((txIndex < (transactions.length - 1) || txids.length > limit) ? "mb-3" : ""))
 										div.card-header.text-monospace.clearfix
 											div.float-left.mr-0
 												if (sort == "desc")
@@ -370,7 +370,7 @@ block content
 
 
 				div.tab-pane(id="tab-json", role="tabpanel")
-					div.card.shadow-sm.mb-3
+					div.card.shadow.mb-3
 						div.card-body
 							h4.h6.mb-0 validateaddress
 							hr
@@ -380,7 +380,7 @@ block content
 									code.json.bg-light(data-lang="json") #{JSON.stringify(result.validateaddress, null, 4)}
 
 					if (addressDetails)
-						div.card.shadow-sm.mb-3
+						div.card.shadow.mb-3
 							div.card-body
 								h4.h6.mb-0 addressDetails
 								hr

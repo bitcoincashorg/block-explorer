@@ -3,11 +3,16 @@ html, body {
     overflow-x: hidden;
 }
 hr {
-	background-color: #555555;
+	background-color: #9c9c9c;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #bbbbbb !important;
 }
 
 .nav-tabs .nav-link.active {
-	border-color: #9a9b9c #9a9b9c #0c0c0c !important;
+    border-color: #bbbbbb #bbbbbb rgb(251, 252, 255) !important;
+    color: #444;
 }
 
 .data-tag {
@@ -28,22 +33,23 @@ hr {
 }
 
 .hljs-attr {
-	color: #eeeeee;
+	color: #686868;
 }
 
 .hljs, .hljs-subst {
-	color: #dddddd;
+    color: #4e4e4e;
+    background: #f3f3f3 !important;
 }
 
 .hljs-type, .hljs-string, .hljs-number, .hljs-selector-id, .hljs-selector-class, .hljs-quote, .hljs-template-tag, .hljs-deletion {
-	color: #95dbc6;
+	color: #3aa54f;
 }
 
 a {
-	color: #F59332
+	color: #ff8d00;
 }
 a:hover {
-    color: #F59332;
+    color: #ff8d00;
     text-decoration: underline;
 }
 
@@ -86,27 +92,27 @@ a:hover {
     padding: 0.5rem 0.75rem;
     margin-left: -1px;
     line-height: 1.25;
-    color: #FFFFFF;
-    background-color: #0c0c0c;
-    border: 1px solid #282d33;
+    color: #444;
+    background-color: #fff;
+    border: 1px solid rgba(154,155,156,.25);
 }
 .page-link:hover {
     z-index: 2;
     color: #FFFFFF;
     text-decoration: none;
-    background-color: #282d33;
-    border-color: #282d33;
+    background-color: #ff8d00;
+    border-color: #ff8d00;
 }
 .page-item.active .page-link {
     z-index: 3;
     color: #fff;
-    background-color: #F59332;
-    border-color: #4D4D4D;
+    background-color: #ff8d00;
+    border-color: #ff8d00;
 }
 .page-item.disabled .page-link {
-    color: #000;
+    color: rgba(154,155,156,.4);
     pointer-events: none;
     cursor: auto;
-    background-color: #202326;
-    border-color: #282d33;
+    background-color: #fff;
+    border-color: rgba(154,155,156,.25);
 }

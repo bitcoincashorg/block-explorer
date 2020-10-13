@@ -22,13 +22,15 @@ html(lang="en")
 			title Explorer
 
 	body.bg-dark
-		nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+		nav.navbar.navbar-expand-lg.navbar-dark.navbg-blue
 			div.container
 				span(class="dropdown")
-					a(href="/")
-						img.header-image(src="/img/logo/bch.svg", alt="logo")
-						span.navbar-brand #{selectedExplorer.displayName}
-					button(class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+					a(href="https://www.bitcoincash.org")
+						img.header-image(src="/img/logo/bitcoin-cash-logo.png", alt="bitcoin cash logo")
+						
+
+				span(class="pull-right navbar-text") #{selectedExplorer.displayName}
+					button(class="btn btn-secondary dropdown-toggle dropdown-custom" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
 					div(class="dropdown-menu")
 						each explorer in siblingExplorers
 							a(class="dropdown-item" href=`${explorer.url}`)
@@ -39,19 +41,17 @@ html(lang="en")
 					span(class="navbar-text")
 						a(href="https://github.com/bitcoincashorg/bitcoincash.org/blob/master/workgroups/wg-testing/2020-11-15_upgrade_testnet.md") activation timestamps:
 						| &nbsp; current: #{currentActivation.format('X')} / tomorrow's: #{nextActivation.format('X')}
+					
 
-				span(class="pull-right navbar-text") hosted by 
-					a(href="https://www.bitcoincash.org") BitcoinCash.org
-
-
-		div.row.justify-content-center
-				form(method="post", action="/search" style="width: 450px;")
-							input(type="hidden", name="_csrf", value=csrfToken)
-							div(class="input-group input-group-sm")
-								input(autocomplete="off", type="text", class="form-control form-control-sm", name="query", placeholder="block height/hash, txid, address", value=(query))
-								div(class="input-group-append")
-									button(type="submit", class="btn btn-primary")
-										i(class="fas fa-search")
+		div.container
+			div.row.justify-content-center
+					form(method="post", action="/search" style="width: 100%; margin-top: 20px" class="px-2 px-sm-3")
+								input(type="hidden", name="_csrf", value=csrfToken)
+								div(class="input-group input-group-sm")
+									input(autocomplete="off", type="text", class="form-control form-control-sm formHeight shadow-sm", name="query", placeholder="block height/hash, txid, address", value=(query))
+									div(class="input-group-append")
+										button(type="submit", class="btn btn-primary searchbtn")
+											i(class="fas fa-search")
 
 		div(class="pb-4 pt-3 pt-md-4", style=("background-color: " + bodyBgColor))
 			div(class="container px-2 px-sm-3")
